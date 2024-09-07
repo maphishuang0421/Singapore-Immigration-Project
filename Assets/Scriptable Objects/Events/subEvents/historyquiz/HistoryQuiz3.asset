@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aada177a114c6479cb36aa67adcc9d1b, type: 3}
+  m_Name: HistoryQuiz3
+  m_EditorClassIdentifier: 
+  eventName: History Quiz Question 3
+  eventInfo: Question3
+  eventImage: {fileID: 0}
+  moneyChange: 38ffffff9cffffff9cffffff64000000
+  weeksPassed: 00000000000000000000000000000000
+  eventOptions:
+  - Wrong
+  - Wrong
+  - Wrong
+  - Right
+  eventResultInfo:
+  - Wrong Answer! You lost $200.
+  - Wrong Answer! You lost $100.
+  - Wrong Answer! You lost $100.
+  - Correct! You gained $100.
+  subEventType: 00000000000000000000000000000000
+  subEvent:
+  - {fileID: 11400000, guid: 54748ba4105a748c493a71d51e66e660, type: 2}
+  - {fileID: 11400000, guid: 54748ba4105a748c493a71d51e66e660, type: 2}
+  - {fileID: 11400000, guid: 54748ba4105a748c493a71d51e66e660, type: 2}
+  - {fileID: 11400000, guid: 54748ba4105a748c493a71d51e66e660, type: 2}

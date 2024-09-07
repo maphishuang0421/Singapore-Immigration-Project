@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e96da8a1cb7847c18c09ad29e5abd74, type: 3}
+  m_Name: Date1
+  m_EditorClassIdentifier: 
+  nameAndDate: Jaywalking Law (1959)
+  dateInfo: Prohibits crossing roads within 50 meters of a pedestrian crossing or
+    traffic light without using the facilities. The law aims to ensure pedestrian
+    safety and reduce accidents. Violators can be fined and, in some cases, may face
+    further legal action. Singapore's strict street cameras help maintain order on
+    its busy streets.
+  dateImage: {fileID: 21300000, guid: 4a4ae438d3b4b47c7996954f2fbb7f3c, type: 3}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676ff8b435d1843e8bbddaad2d534e9a, type: 3}
+  m_Name: Central
+  m_EditorClassIdentifier: 
+  regionName: Central Region
+  regionText: The central region of Singapore includes the Bukit Timah, Toa Payoh,
+    Bishan, Tanglin, Orchard, and Marina Bay areas. It features the bustling Orchard
+    Road shopping district, as well as the Istana, the President's residence, among
+    numerous other shopping malls, hotels, and residential communities. It is known
+    for its significant landmarks, like the Singapore Botanic Gardens and Fort Canning
+    Park.
+  regionMoney: 75000
+  chosenRegionInfo: You have chosen to live in the Central Region. You get a starting
+    balance of 75,000. Your balance will be displayed in the top right corner. Benefits
+    are the proximity to shops and stores. Disadvantages are the cost of living and
+    daily expenses.

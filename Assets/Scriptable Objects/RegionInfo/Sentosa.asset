@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676ff8b435d1843e8bbddaad2d534e9a, type: 3}
+  m_Name: Sentosa
+  m_EditorClassIdentifier: 
+  regionName: Sentosa
+  regionText: Sentosa is an island off the southern coast of Singapore, featuring
+    attractions like Universal Studios Singapore, S.E.A. Aquarium, and Adventure
+    Cove Waterpark, as well as luxurious hotels and sandy beaches. It includes popular
+    areas such as Resorts World Sentosa, Siloso Beach, and Palawan Beach. It features
+    numerous recreational facilities, dining options, and entertainment venues. It
+    also has many neighborhoods and nature sites.
+  regionMoney: 85000
+  chosenRegionInfo: You have chosen to live in the Sentosa Region. You get a starting
+    balance of 85,000. Your balance will be displayed in the top right corner. Benefits
+    include luxurious living spaces and beaches. Disadvantages are travel time and
+    access to shops.

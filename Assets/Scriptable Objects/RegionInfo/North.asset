@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676ff8b435d1843e8bbddaad2d534e9a, type: 3}
+  m_Name: North
+  m_EditorClassIdentifier: 
+  regionName: North Region
+  regionText: 'The northern region of Singapore is made up of 4 areas: Woodlands,
+    Yishun, Sembawang, and Admiralty. It is next to the causeway, linking Singapore
+    to Malaysia. It features many neighborhoods and schools. It is known for its
+    significant landmarks, like the Singapore Zoo and Sungei Buloh Wetland Reserve.'
+  regionMoney: 60000
+  chosenRegionInfo: You have chosen to live in the North Region. You get a starting
+    balance of 60,000. Your balance will be displayed in the top right corner. Benefits
+    include access to schools and Malaysia. Disadvantages are proximity to city central
+    and other facilities.

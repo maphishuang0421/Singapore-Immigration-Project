@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676ff8b435d1843e8bbddaad2d534e9a, type: 3}
+  m_Name: West
+  m_EditorClassIdentifier: 
+  regionName: West Region
+  regionText: 'The western region of Singapore is made up of 4 areas: Jurong, Bukit
+    Batok, Clementi, and Boon Lay. It is home to the Jurong Industrial Estate, a
+    key hub for manufacturing and industry. It features many residential neighborhoods
+    and educational institutions. It is known for its significant landmarks, like
+    the Jurong Bird Park and Chinese Garden. Key amenities include large shopping
+    malls like Westgate and recreational facilities.'
+  regionMoney: 58000
+  chosenRegionInfo: You have chosen to live in the Sentosa Region. You get a starting
+    balance of 85,000. Your balance will be displayed in the top right corner. Benefits
+    include good living spaces and nature. A disadvantage is travel time to other
+    regions.

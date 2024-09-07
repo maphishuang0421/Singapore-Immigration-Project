@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aada177a114c6479cb36aa67adcc9d1b, type: 3}
+  m_Name: LawQuiz5
+  m_EditorClassIdentifier: 
+  eventName: Laws Quiz Question 5
+  eventInfo: What is the main purpose of the No Eating or Drinking on Public Transport
+    (MRT) Law?
+  eventImage: {fileID: 21300000, guid: 1c6bae48f1a1947199cc01971b7bbcc3, type: 3}
+  moneyChange: 9cffffff38ffffff960000009cffffff
+  weeksPassed: 00000000000000000000000000000000
+  eventOptions:
+  - To ensure safety on the MRT
+  - To reduce food waste
+  - To maintain cleanliness and comfort on public transport
+  - To discourage long journeys on the MRT
+  eventResultInfo:
+  - Wrong Answer! You lost $200.
+  - Wrong Answer! You lost $100.
+  - Correct! You gained $100.
+  - Wrong Answer! You lost $100.
+  thisEventType: 0
+  subEvent:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

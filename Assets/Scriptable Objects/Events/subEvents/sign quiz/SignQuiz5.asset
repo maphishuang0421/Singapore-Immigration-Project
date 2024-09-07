@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aada177a114c6479cb36aa67adcc9d1b, type: 3}
+  m_Name: SignQuiz5
+  m_EditorClassIdentifier: 
+  eventName: Signatures Quiz Question 5
+  eventInfo: Question5
+  eventImage: {fileID: 0}
+  moneyChange: fa00000038ffffff9cffffff9cffffff
+  weeksPassed: 00000000000000000000000000000000
+  eventOptions:
+  - Right
+  - Wrong
+  - Wrong
+  - Wrong
+  eventResultInfo:
+  - Correct! You gained $250.
+  - Wrong Answer! You lost $200.
+  - Wrong Answer! You lost $100.
+  - Wrong Answer! You lost $100.
+  subEventType: 00000000000000000000000000000000
+  subEvent:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
