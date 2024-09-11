@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
+  m_Name: Spitting
+  m_EditorClassIdentifier: 
+  title: Spitting Law (1960s)
+  info: "Prohibits spitting in public places, with fines of up to SGD 1,000 for violators.
+    The law was introduced to promote public hygiene and prevent the spread of diseases.
+    Strict enforcement ensures that public areas remain clean. The law reflects Singapore\u2019s
+    commitment to high standards of public health."
+  image: {fileID: 21300000, guid: 58af6bf9173604169b57d964c59ee1f1, type: 3}

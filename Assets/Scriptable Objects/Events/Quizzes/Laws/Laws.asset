@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24ed3643a1422d45a747c72a5b9ee9a, type: 3}
+  m_Name: Laws
+  m_EditorClassIdentifier: 
+  title: History
+  questions:
+  - {fileID: 11400000, guid: 669e0def7d7f8ec4c9ff9ee8abeb3cb2, type: 2}
+  - {fileID: 11400000, guid: 52fe73658f4bb8c4c8f2a3a295f31452, type: 2}
+  - {fileID: 11400000, guid: 03ddf70eb25df494abdfa793028d825d, type: 2}
+  - {fileID: 11400000, guid: 42b6db95a5fe6e34caebd78fff6967ba, type: 2}
+  - {fileID: 11400000, guid: bef5c6d8fe24f344dac97f296b1150de, type: 2}

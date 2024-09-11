@@ -2,24 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using Unity.VisualScripting.FullSerializer;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] protected RegionInformationScriptableObject selectedRegionInfo;
-    [SerializeField] protected TMPro.TextMeshProUGUI regionTitleText;
-    [SerializeField] protected TMPro.TextMeshProUGUI infoPanelText;
-    [SerializeField] protected TMPro.TextMeshProUGUI chosenRegionPanelText;
-    [SerializeField] protected TMPro.TextMeshProUGUI moneyPanelText;
-    [SerializeField] protected TMPro.TextMeshProUGUI timeText;
-    [SerializeField] protected TMPro.TextMeshProUGUI eventTextPanel;
-    [SerializeField] protected Image eventImagePanel;
-    [SerializeField] protected EventScriptableObject currentEventInfo;
-    [SerializeField] protected TMPro.TextMeshProUGUI[] eventOptionText;
-    [SerializeField] public GameObject progressTimeButton;
-    [SerializeField] public GameObject nextEventButton;
-    [SerializeField] public GameObject option4;
-    [SerializeField] public int currentButtonNumber;
-    private bool buttonDisabled = false;
+    [SerializeField] private RegionInformationScriptableObject selectedRegionInfo;
+    [SerializeField] private TextMeshProUGUI regionTitleText;
+    [SerializeField] private TextMeshProUGUI infoPanelText;
+    [SerializeField] private TextMeshProUGUI chosenRegionPanelText;
+    [SerializeField] private TextMeshProUGUI moneyPanelText;
+    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private LessonDisplay lessonDisplay;
+    [SerializeField] private GameObject quizPanel;
+    [SerializeField] private EventScriptableObject currentEventInfo;
+
+    private int lessonEntryIndex = 0;
+
     private static UIManager _instance;
     public static UIManager Instance {
         get {
@@ -60,47 +59,36 @@ public class UIManager : MonoBehaviour
 
     public void CreateEvent(EventScriptableObject eventSO) 
     {
-        buttonDisabled = false;
-        if(eventOptionText.Length > eventSO.eventOptions.Count) {
-            option4.SetActive(false);
-        } 
-        else {
-            option4.SetActive(true);
-        }
-        progressTimeButton.SetActive(false);
-        nextEventButton.SetActive(false);
-        eventTextPanel.text = eventSO.eventInfo;
-        eventImagePanel.sprite = eventSO.eventImage;
         currentEventInfo = eventSO;
-        for(int i = 0; i < eventSO.eventOptions.Count; i++)
-        {
-            eventOptionText[i].text = eventSO.eventOptions[i];
-        }
     }
-    public void EventButtonAction(int buttonNumber)
-    {   
-        if(!buttonDisabled) {
-            currentButtonNumber = buttonNumber;
-            eventTextPanel.text = currentEventInfo.eventResultInfo[buttonNumber - 1];
-            GameManager.Instance.UpdateMoney(currentEventInfo.moneyChange[buttonNumber - 1]);
-            if (currentEventInfo.subEvent[buttonNumber - 1] == null)
-            {
-                progressTimeButton.SetActive(true);
-                buttonDisabled = true;
-                //GameManager.Instance.EventCounter();
-            } 
-            else if(currentEventInfo.subEvent[buttonNumber - 1].thisEventType == EventScriptableObject.eventType.timeline) {
-                TimelineManager.Instance.SetUpTimeline(currentEventInfo.subEvent[buttonNumber - 1]);
-            }
-            else
-            {
-                nextEventButton.SetActive(true);
-                buttonDisabled = true;
-            }
-        }
+
+    void SetLesson() {
+        lessonDisplay.SetLesson(
+            currentEventInfo.lesson.lessonEntries[lessonEntryIndex],
+            lessonEntryIndex == 0,
+            lessonEntryIndex == currentEventInfo.lesson.lessonEntries.Length - 1
+        );
     }
-    public void GoSubEvent() 
-    {
-        CreateEvent(currentEventInfo.subEvent[currentButtonNumber - 1]);
+
+    public void StartLesson() {
+        lessonEntryIndex = 0;
+        SetLesson();
+    }
+
+    public void ChangeLessonEntry(bool forward) {
+        if (forward) {
+            lessonEntryIndex++;
+        } else {
+            lessonEntryIndex--;
+        }
+        SetLesson();
+    }
+
+    public void StartQuiz() {
+
+    }
+
+    public void StartSimulation() {
+
     }
 }
