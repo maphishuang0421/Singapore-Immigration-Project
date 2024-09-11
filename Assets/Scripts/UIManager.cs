@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] protected RegionInformationScriptableObject selectedRegionInfo;
+    [SerializeField] protected TMPro.TextMeshProUGUI regionTitleText;
     [SerializeField] protected TMPro.TextMeshProUGUI infoPanelText;
     [SerializeField] protected TMPro.TextMeshProUGUI chosenRegionPanelText;
     [SerializeField] protected TMPro.TextMeshProUGUI moneyPanelText;
@@ -38,6 +39,7 @@ public class UIManager : MonoBehaviour
     public void SetRegionName(RegionInformationScriptableObject regionInfo)
     {
         selectedRegionInfo = regionInfo;
+        regionTitleText.text = regionInfo.name;
         infoPanelText.text = regionInfo.regionText;
     }
 

@@ -8,7 +8,7 @@ public class CharacterControl : MonoBehaviour
     public float playerSpeed;
     public Rigidbody2D rigidBody;
     public NPCDialogue currentNPC;
-    
+
     void Update()
     {
         movementVector.x = Input.GetAxisRaw("Horizontal");
