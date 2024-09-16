@@ -54,9 +54,9 @@ public class UIManager : MonoBehaviour
         moneyPanelText.text = money.ToString();
     }
     
-    public void UpdateTimeText(string time)
+    public void UpdateTimeText()
     {
-        timeText.text = time;
+        timeText.text = currentEventInfo.name;
     }
 
     public void CreateEvent(EventScriptableObject eventSO) 
