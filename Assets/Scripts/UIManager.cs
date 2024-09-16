@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting.FullSerializer;
+using System.Data;
 
 public class UIManager : MonoBehaviour
 {
@@ -14,10 +15,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI moneyPanelText;
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private LessonDisplay lessonDisplay;
-    [SerializeField] private GameObject quizPanel;
+    [SerializeField] private QuizDisplay quizDisplay;
     [SerializeField] private EventScriptableObject currentEventInfo;
 
     private int lessonEntryIndex = 0;
+    private int quizQuestionIndex = 0;
 
     private static UIManager _instance;
     public static UIManager Instance {
@@ -62,17 +64,17 @@ public class UIManager : MonoBehaviour
         currentEventInfo = eventSO;
     }
 
+    public void StartLesson() {
+        lessonEntryIndex = 0;
+        SetLesson();
+    }
+
     void SetLesson() {
         lessonDisplay.SetLesson(
             currentEventInfo.lesson.lessonEntries[lessonEntryIndex],
             lessonEntryIndex == 0,
             lessonEntryIndex == currentEventInfo.lesson.lessonEntries.Length - 1
         );
-    }
-
-    public void StartLesson() {
-        lessonEntryIndex = 0;
-        SetLesson();
     }
 
     public void ChangeLessonEntry(bool forward) {
@@ -85,7 +87,40 @@ public class UIManager : MonoBehaviour
     }
 
     public void StartQuiz() {
+        quizQuestionIndex = 0;
+        SetQuiz();
+    }
 
+    void SetQuiz() {
+        quizDisplay.SetQuestion(currentEventInfo.quiz.questions[quizQuestionIndex]);
+    }
+
+    public void ChangeQuizQuestion() {
+        quizQuestionIndex++;
+        if (quizQuestionIndex == currentEventInfo.quiz.questions.Length) {
+            quizDisplay.FinishQuiz();
+        } else {
+            SetQuiz();
+        }
+    }
+
+    public void SubmitAnswer(int index) {
+        Choice choice = currentEventInfo.quiz.questions[quizQuestionIndex].choices[index];
+
+        string correctAnswer = "";
+        // Get the correct answer
+        foreach (Choice c in currentEventInfo.quiz.questions[quizQuestionIndex].choices)
+        {
+            if (c.rightAnswer) {
+                correctAnswer = c.choiceContent;
+                break;
+            }
+        }
+
+        bool answerCorrect = choice.rightAnswer;
+        int worth = answerCorrect? choice.worth : -choice.worth;
+        GameManager.Instance.UpdateMoney(worth);
+        quizDisplay.SetResultModal(answerCorrect, worth, correctAnswer);
     }
 
     public void StartSimulation() {
