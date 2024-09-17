@@ -11,4 +11,5 @@ public class EventScriptableObject : ScriptableObject
    public Sprite image;
    public Lesson lesson;
    public Quiz quiz;
+   public GameObject simulation;
 }

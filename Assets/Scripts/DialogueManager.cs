@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public NPCDialogue[] NPCs;
     public TMPro.TextMeshProUGUI textBox;
     public string[] currentDialogue;
     public int dialogueIndex = 0;
@@ -25,20 +24,18 @@ public class DialogueManager : MonoBehaviour
             _instance = this;
         }
     }
-    public void SetNPCDialogueInformation() {
-        
-    }
-    public void StartConversation(int NPCindex) {
+
+    public void StartConversation(NPCDialogue dialogue) {
         dialogueCanvas.SetActive(true);
         dialogueIndex = 0;
-        currentDialogue = NPCs[NPCindex].speechList;
+        currentDialogue = dialogue.speechList;
         buttonText.text = "Continue";
         textBox.text = currentDialogue[dialogueIndex];
     }
     public void ContinueDialogue() {
         dialogueIndex += 1;
         if(dialogueIndex == currentDialogue.Length - 1){
-            buttonText.text = "Exit Conversation";
+            buttonText.text = "Exit";
         }
         if(dialogueIndex > currentDialogue.Length - 1){
             dialogueCanvas.SetActive(false);

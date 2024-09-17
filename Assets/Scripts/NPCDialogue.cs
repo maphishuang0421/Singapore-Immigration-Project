@@ -15,6 +15,6 @@ public class NPCDialogue : MonoBehaviour
         NPCindex = index;
     }
     public void StartConversation() {
-        DialogueManager.Instance.StartConversation(NPCindex);
+        DialogueManager.Instance.StartConversation(this);
     }
 }

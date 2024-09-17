@@ -17,3 +17,4 @@ MonoBehaviour:
   image: {fileID: 0}
   lesson: {fileID: 11400000, guid: 6f7bc89613032b442a78fabc5b98fdf1, type: 2}
   quiz: {fileID: 11400000, guid: 44b9d59dabc303844b8359e90187d002, type: 2}
+  simulation: {fileID: 309459421171170105, guid: 1bec8cf06a59b5a4eb229a68496105c2, type: 3}

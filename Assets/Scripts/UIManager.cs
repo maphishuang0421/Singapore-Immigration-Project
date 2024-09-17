@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
 
     private int lessonEntryIndex = 0;
     private int quizQuestionIndex = 0;
+    private GameObject currentSimulation;
 
     private static UIManager _instance;
     public static UIManager Instance {
@@ -124,6 +125,10 @@ public class UIManager : MonoBehaviour
     }
 
     public void StartSimulation() {
+        if (currentSimulation != null) {
+            Destroy(currentSimulation);
+        }
 
+        currentSimulation = Instantiate(currentEventInfo.simulation);
     }
 }

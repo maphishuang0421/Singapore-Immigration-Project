@@ -8,13 +8,29 @@ public class CharacterControl : MonoBehaviour
     public float playerSpeed;
     public Rigidbody2D rigidBody;
     public NPCDialogue currentNPC;
+    public Animator animator;
 
     void Update()
     {
         movementVector.x = Input.GetAxisRaw("Horizontal");
         movementVector.y = Input.GetAxisRaw("Vertical");
-        if(Input.GetButton("Interact")){
+        if(Input.GetButtonDown("Interact")){
             currentNPC.StartConversation();
+        }
+        if(movementVector.x > 0){
+            animator.Play("playerWalkRight");
+        }
+        else if(movementVector.x < 0){
+            animator.Play("playerWalkLeft");
+        }
+        else if(movementVector.y > 0){
+            animator.Play("playerWalkUp");
+        }
+        else if(movementVector.y < 0){
+            animator.Play("playerWalkDown");
+        }
+        else{
+            animator.Play("idle");
         }
     }
     void FixedUpdate()
