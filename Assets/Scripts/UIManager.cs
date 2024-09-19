@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
 
     public UnityEvent onSimulationStopped;
     public UnityEvent onEventCompleted;
+    public UnityEvent onNextEventStarted;
     public UnityEvent onAllEventsFinished;
 
     private int lessonEntryIndex = 0;
@@ -51,6 +52,8 @@ public class UIManager : MonoBehaviour
         currentEventIndex += 1;
         if (currentEventIndex == events.Length) {
             onAllEventsFinished.Invoke();
+        } else {
+            onNextEventStarted.Invoke();
         }
     }
 
