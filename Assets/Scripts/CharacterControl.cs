@@ -14,7 +14,7 @@ public class CharacterControl : MonoBehaviour
     {
         movementVector.x = Input.GetAxisRaw("Horizontal");
         movementVector.y = Input.GetAxisRaw("Vertical");
-        if(Input.GetButtonDown("Interact")){
+        if(currentNPC != null && Input.GetButtonDown("Interact")){
             currentNPC.StartConversation();
         }
         if(movementVector.x > 0){
