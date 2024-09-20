@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     private static DialogueManager _instance;
     public TMPro.TextMeshProUGUI buttonText;
     public GameObject dialogueCanvas;
+    public GameObject player;
+    public GameObject baseUIObject;
      public static DialogueManager Instance {
         get {
             return _instance;
@@ -25,8 +27,14 @@ public class DialogueManager : MonoBehaviour
             _instance = this;
         }
     }
-    public void SetNPCDialogueInformation() {
-        
+    public void SetUpSimulation(Vector2 pos) {
+        baseUIObject.SetActive(false);
+        player.SetActive(true);
+        player.transform.position = pos;
+    }
+    public void ExitSimulation() {
+        baseUIObject.SetActive(true);
+        player.SetActive(false);
     }
     public void StartConversation(int NPCindex) {
         dialogueCanvas.SetActive(true);
@@ -47,5 +55,5 @@ public class DialogueManager : MonoBehaviour
         textBox.text = currentDialogue[dialogueIndex];
         }
     }
-    
+
 }

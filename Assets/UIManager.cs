@@ -90,6 +90,9 @@ public class UIManager : MonoBehaviour
             else if(currentEventInfo.subEvent[buttonNumber - 1].thisEventType == EventScriptableObject.eventType.timeline) {
                 TimelineManager.Instance.SetUpTimeline(currentEventInfo.subEvent[buttonNumber - 1]);
             }
+            else if(currentEventInfo.subEvent[buttonNumber - 1].thisEventType == EventScriptableObject.eventType.simulation) {
+                DialogueManager.Instance.SetUpSimulation(currentEventInfo.subEvent[buttonNumber - 1].playerPosition);
+            }
             else
             {
                 nextEventButton.SetActive(true);

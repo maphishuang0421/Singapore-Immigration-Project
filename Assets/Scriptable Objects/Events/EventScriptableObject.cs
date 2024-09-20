@@ -13,6 +13,7 @@ public class EventScriptableObject : ScriptableObject
    public List<int> weeksPassed;
    public List<string> eventOptions;
    public List<string> eventResultInfo;
+   public Vector2 playerPosition;
    public enum eventType{
     quiz, timeline, simulation
    }
