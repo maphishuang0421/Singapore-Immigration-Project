@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private QuizDisplay quizDisplay;
     [SerializeField] private EventScriptableObject[] events;
     [SerializeField] private int currentEventIndex = 0;
+    public GameObject camera;
 
     public UnityEvent onSimulationStopped;
     public UnityEvent onEventCompleted;

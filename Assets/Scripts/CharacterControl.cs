@@ -9,6 +9,11 @@ public class CharacterControl : MonoBehaviour
     public Rigidbody2D rigidBody;
     public NPCDialogue currentNPC;
     public Animator animator;
+    public GameObject camera;
+
+    void Start() {
+        camera = UIManager.Instance.camera;
+    }
 
     void Update()
     {
@@ -31,6 +36,10 @@ public class CharacterControl : MonoBehaviour
         }
         else{
             animator.Play("idle");
+        }
+        if (camera.activeInHierarchy) {
+            camera.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+
         }
     }
     void FixedUpdate()
