@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class ServerManager : MonoBehaviour
 {
-    public string apiUrl = "https://maphis-server.onrender.com/generate";
+    public string apiUrl = "https://maphis-server.onrender.com/generate_dialog";
     public Dialog dialog;
     public UnityEvent generatingDialogue;
     public UnityEvent dialogueGenerated;
