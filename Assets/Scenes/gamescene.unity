@@ -3234,7 +3234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03385bf5905ef704d9adbbfd54730cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiUrl: https://maphis-server.onrender.com/generate
+  apiUrl: https://maphis-server.onrender.com/generate_dialog
   dialog:
     dialog: 
     chatOptions: []
@@ -12589,6 +12589,4 @@ SceneRoots:
   - {fileID: 2041082942}
   - {fileID: 1835072876}
   - {fileID: 596232406}
-  - {fileID: 1736294481}
-  - {fileID: 702389011}
-  - {fileID: 2111383160}
+  - {fileID: 548032006}
