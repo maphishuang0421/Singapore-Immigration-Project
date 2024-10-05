@@ -27,12 +27,12 @@ public class ServerManager : MonoBehaviour
     public class PromptRequest
     {
         public string persona;
-        public string chatlog;
+        public string chat_log;
 
-        public PromptRequest(string persona, string chatlog)
+        public PromptRequest(string persona, string chat_log)
         {
             this.persona = persona;
-            this.chatlog = chatlog;
+            this.chat_log = chat_log;
         }
     }
     private static ServerManager _instance;
@@ -69,6 +69,7 @@ public class ServerManager : MonoBehaviour
         {
             // Parse the response
             string jsonResponse = request.downloadHandler.text;
+            print(jsonResponse);
             dialog = JsonConvert.DeserializeObject<Dialog>(jsonResponse);
 
             chatlog += "\n";
