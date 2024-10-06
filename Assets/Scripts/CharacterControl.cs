@@ -9,11 +9,16 @@ public class CharacterControl : MonoBehaviour
     public Rigidbody2D rigidBody;
     public NPCDialogue currentNPC;
     public Animator animator;
+    public GameObject camera;
+    void Awake() {
+        camera = UIManager.Instance.camera;
+    }
     void Update()
     {
         movementVector.x = Input.GetAxisRaw("Horizontal");
         movementVector.y = Input.GetAxisRaw("Vertical");
         if(currentNPC != null && Input.GetButtonDown("Interact")){
+            Debug.Log("starting conversation");
             currentNPC.StartConversation();
         }
         if(movementVector.x > 0){
@@ -30,6 +35,9 @@ public class CharacterControl : MonoBehaviour
         }
         else{
             animator.Play("idle");
+        }
+        if (camera.activeInHierarchy) {
+            camera.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
         }
     }
     void FixedUpdate()

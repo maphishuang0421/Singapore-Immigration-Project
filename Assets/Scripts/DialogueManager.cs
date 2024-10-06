@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI textBox;
-    public string[] currentDialogue;
+    public List<string> currentDialogue;
     public int dialogueIndex = 0;
     private static DialogueManager _instance;
     public TMPro.TextMeshProUGUI buttonText;
@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartConversation(NPCDialogue dialogue) {
+        Debug.Log("conversation is starting");
         dialogueCanvas.SetActive(true);
         dialogueIndex = 0;
         currentDialogue = dialogue.speechList;
@@ -34,10 +35,10 @@ public class DialogueManager : MonoBehaviour
     }
     public void ContinueDialogue() {
         dialogueIndex += 1;
-        if(dialogueIndex == currentDialogue.Length - 1){
+        if(dialogueIndex == currentDialogue.Count - 1){
             buttonText.text = "Exit";
         }
-        if(dialogueIndex > currentDialogue.Length - 1){
+        if(dialogueIndex > currentDialogue.Count - 1){
             dialogueCanvas.SetActive(false);
         }
         else{

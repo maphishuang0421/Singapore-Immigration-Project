@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class NPCDialogue : MonoBehaviour
 {
-    public string[] speechList;
+    public List<string> speechList;
     public GameObject speechBubble;
     public int NPCindex;
     public string persona;
@@ -15,10 +16,16 @@ public class NPCDialogue : MonoBehaviour
         NPCindex = index;
     }
     public void StartConversation() {
-        ServerManager.Instance.GenerateDialog(persona);
+        speechList = ServerManager.Instance.dialog.dialog.Split('\n').ToList();
+        for(int i=speechList.Count-1; i>=0; i--) {
+            if(speechList[i] == "") {
+                speechList.RemoveAt(i);
+            }
+        }
+        Debug.Log("starting dialogue manager conversation");
         DialogueManager.Instance.StartConversation(this);
     }
-    public void Start() {
-        
+    public void Awake() {
+        ServerManager.Instance.GenerateDialog(persona);
     }
 }
