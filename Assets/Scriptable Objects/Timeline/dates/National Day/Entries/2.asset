@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  title: British Singapura
+  info: 'In 1819, British statesman Stamford Raffles arrived in Singapura and struck
+    a deal with locals to make Singapore a free trading port. The Dutch had blocked
+    off all trade in that area, and the British wanted to make Singapore''s port
+    free to encourage trade. By 1871, Singapore''s population had reached nearly
+    100,000. '
+  image: {fileID: 0}

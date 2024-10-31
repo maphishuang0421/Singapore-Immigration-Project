@@ -22,3 +22,6 @@ MonoBehaviour:
     balance of 60,000. Your balance will be displayed in the top right corner. Benefits
     include access to schools and Malaysia. Disadvantages are proximity to city central
     and other facilities.
+  livingExpenses: 8500
+  reward: 1500
+  penalty: 1200

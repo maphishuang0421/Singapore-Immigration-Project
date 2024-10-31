@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] protected List<string> months = new List<string> {"July", "August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June"};
     [SerializeField] protected int monthIndex = 0;
     [SerializeField] protected int monthEventNumber = 0;
+    [SerializeField] private RegionInformationScriptableObject selectedRegionInfo;
     private static GameManager _instance;
     public static GameManager Instance {
         get {
@@ -28,5 +29,15 @@ public class GameManager : MonoBehaviour
     public void UpdateMoney(int changeAmount) {
         money += changeAmount;
         UIManager.Instance.UpdateMoneyText(money);
+    }
+    public void SetRegionName(RegionInformationScriptableObject regionInfo) {
+        selectedRegionInfo = regionInfo;
+    }
+    public void MonthDeduction() {
+        UpdateMoney(-selectedRegionInfo.livingExpenses);
+        if (money <= 0) {
+            money = 0;
+            UIManager.Instance.Finished("You lost. You have no more money. Thank you for playing.");
+        }
     }
 }

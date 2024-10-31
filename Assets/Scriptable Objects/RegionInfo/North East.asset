@@ -23,3 +23,6 @@ MonoBehaviour:
     balance of 55,000. Your balance will be displayed in the top right corner. Benefits
     include Benefits include access to schools and living spaces. Disadvantages are
     proximity to city central and other facilities.
+  livingExpenses: 7200
+  reward: 1300
+  penalty: 1000

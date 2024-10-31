@@ -3722,6 +3722,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cadce1b6090794820a5867e7465aed59, type: 2}
   - {fileID: 11400000, guid: 5c9185a5577b004448a677496961be62, type: 2}
   currentEventIndex: 0
+  endPanelText: {fileID: 1379146918}
   camera: {fileID: 533042149}
   onSimulationStopped:
     m_PersistentCalls:
@@ -8561,6 +8562,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2041082941}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MonthDeduction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1574456459}
+        m_TargetAssemblyTypeName: TweenPositions, Assembly-CSharp
+        m_MethodName: MoveStartFinish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 596232407}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SetMonthDeductionPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1369833216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12589,6 +12626,7 @@ MonoBehaviour:
   - July
   monthIndex: 0
   monthEventNumber: 0
+  selectedRegionInfo: {fileID: 0}
 --- !u!4 &2041082942
 Transform:
   m_ObjectHideFlags: 0

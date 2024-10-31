@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  title: British Singapura
+  info: In the 1300s, Singapore was named Temasek by the Malay, meaning 'Sea Town'.
+    The story goes that a prince discovered a strange beast said to be a lion, and
+    named the settlement Singapura, meaning 'Lion City'. At this time, Singapore's
+    population was about 1000, mostly Malays and Chinese. The Malay Archipelago was
+    mainly under Dutch control at the time.
+  image: {fileID: 0}

@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private QuizDisplay quizDisplay;
     [SerializeField] private EventScriptableObject[] events;
     [SerializeField] private int currentEventIndex = 0;
+    [SerializeField] private TextMeshProUGUI endPanelText;
     public GameObject camera;
 
     public UnityEvent onSimulationStopped;
@@ -52,23 +53,31 @@ public class UIManager : MonoBehaviour
     public void GoToNextEvent() {
         currentEventIndex += 1;
         if (currentEventIndex == events.Length) {
-            onAllEventsFinished.Invoke();
+            Finished("You won! Thank you for playing.");
         } else {
             onNextEventStarted.Invoke();
         }
     }
-
+    public void Finished(string endscreentext) {
+        onAllEventsFinished.Invoke();
+        endPanelText.text = endscreentext;
+    }
     public void SetRegionName(RegionInformationScriptableObject regionInfo)
     {
         selectedRegionInfo = regionInfo;
         regionTitleText.text = regionInfo.name;
         infoPanelText.text = regionInfo.regionText;
+        GameManager.Instance.SetRegionName(regionInfo);
     }
 
     public void SetChosenRegionPanel()
     {
         chosenRegionPanelText.text = selectedRegionInfo.chosenRegionInfo;
         GameManager.Instance.UpdateMoney(selectedRegionInfo.regionMoney);
+    }
+    public void SetMonthDeductionPanel()
+    {
+        chosenRegionPanelText.text = "You have spent $" + selectedRegionInfo.livingExpenses + " on your monthly living expenses.";
     }
     public void UpdateMoneyText(int money)
     {
@@ -145,7 +154,7 @@ public class UIManager : MonoBehaviour
         }
 
         bool answerCorrect = choice.rightAnswer;
-        int worth = answerCorrect? choice.worth : -choice.worth;
+        int worth = answerCorrect? selectedRegionInfo.reward : -selectedRegionInfo.penalty;
         GameManager.Instance.UpdateMoney(worth);
         quizDisplay.SetResultModal(answerCorrect, worth, correctAnswer);
     }
@@ -180,8 +189,9 @@ public class UIManager : MonoBehaviour
     }
 
     public void DetermineEventCompleted() {
-        if (lessonDone && quizDone && simulationDone) {
+        if (quizDone) {
             onEventCompleted.Invoke();
+            quizDone = false;
         }
     }
 }

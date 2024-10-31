@@ -24,3 +24,6 @@ MonoBehaviour:
     of 50,000. Your balance will be displayed in the top right corner. Benefits of
     living here include more chances to talk to locals. Disadvantages are the length
     of transportation to the main island, and the limited resources.
+  livingExpenses: 7000
+  reward: 1300
+  penalty: 1000

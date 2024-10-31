@@ -24,3 +24,6 @@ MonoBehaviour:
     balance of 85,000. Your balance will be displayed in the top right corner. Benefits
     include good living spaces and nature. A disadvantage is travel time to other
     regions.
+  livingExpenses: 7600
+  reward: 1400
+  penalty: 1100

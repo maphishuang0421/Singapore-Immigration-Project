@@ -16,7 +16,7 @@ public class NPCDialogue : MonoBehaviour
         NPCindex = index;
     }
     public void StartConversation() {
-        speechList = ServerManager.Instance.dialog.dialog.Split('\n').ToList();
+        speechList = ServerManager.Instance.NPCDialogue[NPCindex].Split('\n').ToList();
         for(int i=speechList.Count-1; i>=0; i--) {
             if(speechList[i] == "") {
                 speechList.RemoveAt(i);
@@ -26,6 +26,6 @@ public class NPCDialogue : MonoBehaviour
         DialogueManager.Instance.StartConversation(this);
     }
     public void Awake() {
-        ServerManager.Instance.GenerateDialog(persona);
+        ServerManager.Instance.GenerateDialog(persona, NPCindex);
     }
 }

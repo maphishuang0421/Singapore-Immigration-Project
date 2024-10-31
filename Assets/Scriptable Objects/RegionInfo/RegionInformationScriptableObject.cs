@@ -9,5 +9,8 @@ public class RegionInformationScriptableObject : ScriptableObject
     public string regionText;
     public int regionMoney;
     public string chosenRegionInfo;
+    public int livingExpenses;
+    public int reward;
+    public int penalty;
     
 }

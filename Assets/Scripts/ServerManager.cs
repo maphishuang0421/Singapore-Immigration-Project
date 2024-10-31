@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Newtonsoft.Json;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 public class ServerManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ServerManager : MonoBehaviour
     public UnityEvent dialogueGenerated;
     public UnityEvent answerRight;
     public UnityEvent answerWrong;
+    public Dictionary<int, string> NPCDialogue;
 
     [TextArea]
     public string chatlog = "";
@@ -48,13 +50,14 @@ public class ServerManager : MonoBehaviour
         else {
             _instance = this;
         }
+        NPCDialogue = new Dictionary<int, string>();
     }
-    public void GenerateDialog(string persona)
+    public void GenerateDialog(string persona, int NPCID)
     {
-        StartCoroutine(PostRequest(persona));
+        StartCoroutine(PostRequest(persona, NPCID));
     }
 
-    private IEnumerator PostRequest(string persona)
+    private IEnumerator PostRequest(string persona, int NPCID)
     {
         generatingDialogue.Invoke();
 
@@ -83,6 +86,7 @@ public class ServerManager : MonoBehaviour
             chatlog += "YOU: " + dialog.dialog;
 
             dialogueGenerated.Invoke();
+            NPCDialogue[NPCID] = dialog.dialog;
         }
         else
         {

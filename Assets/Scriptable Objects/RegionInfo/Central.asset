@@ -24,3 +24,6 @@ MonoBehaviour:
     balance of 75,000. Your balance will be displayed in the top right corner. Benefits
     are the proximity to shops and stores. Disadvantages are the cost of living and
     daily expenses.
+  livingExpenses: 10000
+  reward: 2000
+  penalty: 1700
