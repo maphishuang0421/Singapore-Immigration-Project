@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
+  m_Name: 1824
+  m_EditorClassIdentifier: 
+  title: 'Anglo-Dutch Treaty and Formal British Control 1824 '
+  info: "The Anglo-Dutch Treaty solidifies British control of Singapore, ensuring
+    its place in the British colonial empire. The treaty resolves territorial disputes
+    between Britain and the Netherlands, giving the Dutch control over Indonesia
+    while the British retain Singapore and other territories in the Malay Peninsula.
+    Under British rule, Singapore\u2019s population grows rapidly as it becomes a
+    center for trade, with thriving communities of Chinese laborers, Indian traders,
+    and Malay fishermen."
+  image: {fileID: 21300000, guid: 4a4ae438d3b4b47c7996954f2fbb7f3c, type: 3}

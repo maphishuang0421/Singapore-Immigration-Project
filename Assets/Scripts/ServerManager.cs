@@ -51,6 +51,7 @@ public class ServerManager : MonoBehaviour
             _instance = this;
         }
         NPCDialogue = new Dictionary<int, string>();
+        GenerateDialog("do not generate anything.", 0);
     }
     public void GenerateDialog(string persona, int NPCID)
     {

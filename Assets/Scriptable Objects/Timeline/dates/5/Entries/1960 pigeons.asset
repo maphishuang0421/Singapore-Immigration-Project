@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
+  m_Name: 1960 pigeons
+  m_EditorClassIdentifier: 
+  title: Feeding Pigeons Prohibited 1960s
+  info: Feeding pigeons is illegal to control the pigeon population and prevent hygiene
+    issues, as large flocks of pigeons contribute to the spread of diseases like
+    psittacosis. The law is enforced in parks, streets, and public spaces to deter
+    such behavior. First-time offenders face a fine of up to SGD 500, while repeat
+    violations can lead to heavier penalties. Public education campaigns emphasize
+    the ecological and health risks of overfeeding urban wildlife.
+  image: {fileID: 21300000, guid: cce8898b6e8aa4da6bb90f5e956f42e7, type: 3}

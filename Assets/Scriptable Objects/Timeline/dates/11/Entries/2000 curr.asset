@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
+  m_Name: 2000 curr
+  m_EditorClassIdentifier: 
+  title: 'Revised Curriculum (2000s) '
+  info: "The education system evolved to prioritize holistic development, emphasizing
+    creativity, critical thinking, and character-building. Initiatives like \u201CTeach
+    Less, Learn More\u201D encouraged schools to focus on quality rather than quantity
+    in teaching. Co-curricular activities (CCAs) gained importance as part of student
+    development.  "
+  image: {fileID: 21300000, guid: afe917992a9df41c1aba78e5e0f08221, type: 3}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa357437ab5bb94394291d2e213a8be, type: 3}
+  m_Name: 10
+  m_EditorClassIdentifier: 
+  title: Laws
+  lessonEntries:
+  - {fileID: 11400000, guid: 919488f6e475b40ecab16ebd1d175c59, type: 2}
+  - {fileID: 11400000, guid: 57652bb6229734476a230f3b9273759b, type: 2}
+  - {fileID: 11400000, guid: 8a2603ffb1fe648058f8fdced0265163, type: 2}
+  - {fileID: 11400000, guid: 64b93d633bcda48a99b2d9fa968cab90, type: 2}
+  - {fileID: 11400000, guid: 850d7e8453d7a4bc79647249ae30fcfa, type: 2}
+  - {fileID: 11400000, guid: e1f053a73423947e796a53f65ead0fad, type: 2}
+  - {fileID: 11400000, guid: 0d926fab186ca4090833e8bbc3fbe468, type: 2}
+  - {fileID: 11400000, guid: d810ef4f5af3f48e0a7cd67be39ea46d, type: 2}
+  - {fileID: 11400000, guid: eed7885c617dd4d428a21f8143e62d2d, type: 2}
+  - {fileID: 11400000, guid: f430666001f93c646a95074225a15e21, type: 2}

@@ -49,3 +49,9 @@ MonoBehaviour:
   dialogueIndex: 0
   buttonText: {fileID: 0}
   dialogueCanvas: {fileID: 0}
+  charactersToRemove:
+  - '#'
+  - '@'
+  - '*'
+  - '['
+  - ']'

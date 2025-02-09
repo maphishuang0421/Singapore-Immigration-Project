@@ -12,4 +12,5 @@ public class EventScriptableObject : ScriptableObject
    public Lesson lesson;
    public Quiz quiz;
    public GameObject simulation;
+   public int numNPC; 
 }

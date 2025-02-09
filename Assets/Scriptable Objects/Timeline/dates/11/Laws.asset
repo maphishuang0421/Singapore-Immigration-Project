@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa357437ab5bb94394291d2e213a8be, type: 3}
+  m_Name: Laws
+  m_EditorClassIdentifier: 
+  title: Laws
+  lessonEntries:
+  - {fileID: 11400000, guid: 6536ba774c2f54553a2b1cbdea1cb753, type: 2}
+  - {fileID: 11400000, guid: bc2fc117251024d54a2f9be7c22ba751, type: 2}
+  - {fileID: 11400000, guid: 2badd0a762e7e4ba5863967bf9da3726, type: 2}
+  - {fileID: 11400000, guid: b6198e02e4b2c4534912570f02235aab, type: 2}
+  - {fileID: 11400000, guid: c2f44883d6e324ced928b908a295e60f, type: 2}
+  - {fileID: 11400000, guid: f1c5b9b97e55f4ac2acb6963c4baedb5, type: 2}
+  - {fileID: 11400000, guid: 2fb45468550374101b4a750b04c16912, type: 2}
+  - {fileID: 11400000, guid: a79ce70b4d665416d934ced9e291102c, type: 2}

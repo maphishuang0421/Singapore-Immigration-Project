@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbf015ca3115974398105f35bbbb5d9, type: 3}
+  m_Name: Q5 3
+  m_EditorClassIdentifier: 
+  question: What significant cultural contribution did Arab merchants bring to Singapore
+    in the 1820s?
+  image: {fileID: 21300000, guid: 1c6bae48f1a1947199cc01971b7bbcc3, type: 3}
+  choices:
+  - choiceContent: A. The introduction of Chinese New Year traditions
+    rightAnswer: 0
+    worth: 100
+  - choiceContent: B. The establishment of Kampong Glam and Sultan Mosque
+    rightAnswer: 1
+    worth: 200
+  - choiceContent: C. The creation of the kebaya and beaded slippers
+    rightAnswer: 0
+    worth: 150
+  - choiceContent: D. The founding of coffee shops serving kaya toast
+    rightAnswer: 0
+    worth: 150

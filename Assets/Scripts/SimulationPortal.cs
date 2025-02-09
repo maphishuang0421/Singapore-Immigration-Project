@@ -6,6 +6,10 @@ public class SimulationPortal : MonoBehaviour
 {
     public GameObject prompt;
     private bool playerInRange = false;
+
+    public void Awake() {
+        GameManager.Instance.SetSimulationPortal(this);
+    }
     
     public void SetPromptVisibility(bool status) {
         prompt.SetActive(status);

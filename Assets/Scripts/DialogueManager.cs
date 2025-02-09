@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     private static DialogueManager _instance;
     public TMPro.TextMeshProUGUI buttonText;
     public GameObject dialogueCanvas;
+    public List<string> charactersToRemove;
      public static DialogueManager Instance {
         get {
             return _instance;
@@ -45,5 +46,8 @@ public class DialogueManager : MonoBehaviour
         textBox.text = currentDialogue[dialogueIndex];
         }
     }
-    
+    public void OpenShop() {
+        dialogueCanvas.SetActive(true);
+        textBox.text = "Welcome to the shop!";
+    }
 }

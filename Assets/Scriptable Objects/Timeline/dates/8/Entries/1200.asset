@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
+  m_Name: 1200
+  m_EditorClassIdentifier: 
+  title: Life Before Colonization Pre-14th Century
+  info: Singapore, then known as "Temasek" or "Sea Town," thrives as a trading hub
+    in the Malay Archipelago. Its strategic location near the Strait of Malacca makes
+    it a vital stop for Chinese, Indian, and Arab merchants. The island's indigenous
+    inhabitants, including the Orang Laut or "Sea People," play a critical role as
+    skilled navigators and intermediaries in trade. Temasek is surrounded by dense
+    jungles and swamps, with settlements primarily clustered near the coast.
+  image: {fileID: 21300000, guid: 88baf38a697df4a01a0ace0cf81a7f9e, type: 3}

@@ -170,6 +170,7 @@ public class UIManager : MonoBehaviour
         }
 
         currentSimulation = Instantiate(events[currentEventIndex].simulation);
+        GameManager.Instance.SetUpSimluation(events[currentEventIndex].numNPC);
     }
 
     public void EndSimulation() {

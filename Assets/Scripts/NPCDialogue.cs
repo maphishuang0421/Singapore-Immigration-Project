@@ -15,17 +15,22 @@ public class NPCDialogue : MonoBehaviour
     public void SetNPCIndex(int index) {
         NPCindex = index;
     }
-    public void StartConversation() {
+    public virtual void StartConversation() {
         speechList = ServerManager.Instance.NPCDialogue[NPCindex].Split('\n').ToList();
         for(int i=speechList.Count-1; i>=0; i--) {
             if(speechList[i] == "") {
                 speechList.RemoveAt(i);
+            } else {
+                foreach(var c in DialogueManager.Instance.charactersToRemove) {
+                    speechList[i] = speechList[i].Replace(c, string.Empty);
+                } 
             }
         }
         Debug.Log("starting dialogue manager conversation");
         DialogueManager.Instance.StartConversation(this);
+        GameManager.Instance.UpdateNpcChecklist(NPCindex);
     }
-    public void Awake() {
+    public virtual void Awake() {
         ServerManager.Instance.GenerateDialog(persona, NPCindex);
     }
 }

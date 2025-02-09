@@ -8,4 +8,5 @@ public class Lesson : ScriptableObject
 {
     public string title;
     public LessonEntry[] lessonEntries;
+    
 }
