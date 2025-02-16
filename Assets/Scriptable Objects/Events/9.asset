@@ -18,3 +18,4 @@ MonoBehaviour:
   lesson: {fileID: 11400000, guid: bb213e8b899ed43a8a5a8a5645b35229, type: 2}
   quiz: {fileID: 11400000, guid: 5ad5f23343d664b8991c2b5dd3fd6547, type: 2}
   simulation: {fileID: 309459421171170105, guid: 0211d57b256104683921eea15d5bb234, type: 3}
+  numNPC: 3

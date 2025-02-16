@@ -9,6 +9,7 @@ public class SimulationPortal : MonoBehaviour
 
     public void Awake() {
         GameManager.Instance.SetSimulationPortal(this);
+        gameObject.SetActive(false);
     }
     
     public void SetPromptVisibility(bool status) {

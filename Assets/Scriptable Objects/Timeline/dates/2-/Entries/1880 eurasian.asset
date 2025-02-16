@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1880 eurasian
   m_EditorClassIdentifier: 
-  title: 'Eurasian Settlers Late 19th Century '
-  info: 'Eurasians, descendants of European and Asian unions, formed a small but
-    impactful community. They were prominent in professions like teaching, law, and
-    music. Eurasians played a key role in colonial administration and education,
-    leaving a legacy of cultural fusion evident in their cuisine and customs.  '
+  title: "Expansion of MRT and LRT Networks \u2013 2000s "
+  info: "As Singapore\u2019s population continued to grow, new MRT lines and the
+    Light Rail Transit (LRT) system were developed to serve residential areas. The
+    expansion provided greater accessibility and convenience, reducing reliance on
+    private vehicles.  "
   image: {fileID: 21300000, guid: 58af6bf9173604169b57d964c59ee1f1, type: 3}

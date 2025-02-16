@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1900 modern
   m_EditorClassIdentifier: 
-  title: 'Modern Migration Waves 20th Century '
-  info: "Singapore\u2019s independence and rapid industrialization attracted migrants
-    from Asia, Europe, and beyond. Policies encouraging skilled workers brought a
-    diverse influx of talents, further enriching the nation\u2019s multicultural
-    makeup. Today, Singapore is celebrated as a global city where people of various
-    ethnicities coexist harmoniously, contributing to its economic success and cultural
-    vibrancy.        "
+  title: "Smart Transport and Green Mobility \u2013 2010s "
+  info: 'Singapore embraced smart technology in transportation, introducing contactless
+    payment systems like SimplyGo and expanding the fleet of electric buses. Bicycle-sharing
+    programs and pedestrian-friendly infrastructure were also developed, promoting
+    sustainable and eco-friendly transport options.  '
   image: {fileID: 21300000, guid: f67ded3ac7bbb49c487b247f821248f0, type: 3}

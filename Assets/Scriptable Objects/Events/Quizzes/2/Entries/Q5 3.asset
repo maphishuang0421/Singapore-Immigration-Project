@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbf015ca3115974398105f35bbbb5d9, type: 3}
   m_Name: Q5 3
   m_EditorClassIdentifier: 
-  question: placeholder
+  question: '4. Why did Singapore phase out its tram system by 1927? '
   image: {fileID: 21300000, guid: 1c6bae48f1a1947199cc01971b7bbcc3, type: 3}
   choices:
-  - choiceContent: none
-    rightAnswer: 1
+  - choiceContent: The government banned trams
+    rightAnswer: 0
     worth: 100
-  - choiceContent: none
+  - choiceContent: The rise of buses and cars made them useless
     rightAnswer: 1
     worth: 200
-  - choiceContent: none
+  - choiceContent: They were to expensive to operate
     rightAnswer: 1
     worth: 150
-  - choiceContent: none
-    rightAnswer: 1
+  - choiceContent: They were too slow
+    rightAnswer: 0
     worth: 150

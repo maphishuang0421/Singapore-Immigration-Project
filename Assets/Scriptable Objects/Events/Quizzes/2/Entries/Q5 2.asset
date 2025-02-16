@@ -12,18 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbf015ca3115974398105f35bbbb5d9, type: 3}
   m_Name: Q5 2
   m_EditorClassIdentifier: 
-  question: placeholder
+  question: '3. What was the purpose of the Electronic Road Pricing (ERP) system
+    introduced in 1998? '
   image: {fileID: 21300000, guid: 1c6bae48f1a1947199cc01971b7bbcc3, type: 3}
   choices:
-  - choiceContent: none
+  - choiceContent: To manage traffic congestion
     rightAnswer: 1
     worth: 100
-  - choiceContent: none
-    rightAnswer: 1
+  - choiceContent: To reduce fuel consumption
+    rightAnswer: 0
     worth: 200
-  - choiceContent: none
-    rightAnswer: 1
+  - choiceContent: To increase public transport fares
+    rightAnswer: 0
     worth: 150
-  - choiceContent: none
-    rightAnswer: 1
+  - choiceContent: To collect fees for road maintenance
+    rightAnswer: 0
     worth: 150

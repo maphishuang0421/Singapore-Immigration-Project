@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private int currentEventIndex = 0;
     [SerializeField] private TextMeshProUGUI endPanelText;
     public GameObject camera;
+    public TextMeshProUGUI simQuest;
+    public TextMeshProUGUI simQuest2;
 
     public UnityEvent onSimulationStopped;
     public UnityEvent onEventCompleted;
@@ -171,11 +173,22 @@ public class UIManager : MonoBehaviour
 
         currentSimulation = Instantiate(events[currentEventIndex].simulation);
         GameManager.Instance.SetUpSimluation(events[currentEventIndex].numNPC);
+        simQuest.gameObject.transform.parent.gameObject.SetActive(true);
     }
 
     public void EndSimulation() {
         onSimulationStopped.Invoke();
         MarkSimulationDone();
+        //simQuest.gameObject.transform.parent.gameObject.SetActive(false);
+    }
+
+    public void UpdateSimQuestText(int count, int totalNpc) {
+        simQuest.text = "Objective: Talk to all the NPCs.<br><br>Progress: ";
+        simQuest2.text = count + "/" + totalNpc;
+        if (count == totalNpc) {
+            simQuest.text = "Objective: Find the exit";
+            simQuest2.text = "";
+        }
     }
 
     public void DeleteSimulation() {
@@ -195,4 +208,5 @@ public class UIManager : MonoBehaviour
             quizDone = false;
         }
     }
+
 }

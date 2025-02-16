@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1300 chinese
   m_EditorClassIdentifier: 
-  title: Arrival of Chinese Traders 14th Century
-  info: "Chinese merchants began visiting Temasek, attracted by its strategic location
-    near the Strait of Malacca. They traded porcelain, silk, and tea for spices and
-    other goods. Over time, many Chinese traders settled on the island, bringing
-    with them cultural practices, festivals, and culinary traditions that became
-    foundational to Singapore\u2019s identity."
+  title: "Electric Trams \u2013 1905 "
+  info: Singapore introduced its first electric trams in the early 20th century,
+    replacing horse-drawn carriages. Operated by the Singapore Tramways Company,
+    trams provided an efficient way for people to travel across the city. However,
+    the system was short-lived, ceasing operations by 1927 due to rising car and
+    bus usage.
   image: {fileID: 21300000, guid: 5115cf0708ef747f380fc999d1132c61, type: 3}

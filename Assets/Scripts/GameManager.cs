@@ -37,20 +37,24 @@ public class GameManager : MonoBehaviour
     public void SetUpSimluation(int npc) {
         totalNpc = npc;
         npcChecklist = new bool[totalNpc];
+        UIManager.Instance.UpdateSimQuestText(0, totalNpc);
     }
     public void UpdateNpcChecklist(int NPCindex) {
         npcChecklist[NPCindex] = true;
-        if (AllNpcTrue) {
-
+        int count = NumNpcTrue();
+        if (count == totalNpc) {
+            portal.gameObject.SetActive(true);
         }
+        UIManager.Instance.UpdateSimQuestText(count, totalNpc);
     }
-    public bool AllNpcTrue() {
+    public int NumNpcTrue() {
+        int count = 0;
         for(int i = 0; i < npcChecklist.Length; i++) {
-            if (!npcChecklist[i]) {
-                return false;
+            if (npcChecklist[i]) {
+                count++;
             }
         }
-        return true;
+        return count;
     }
     public void UpdateMoney(int changeAmount) {
         money += changeAmount;
