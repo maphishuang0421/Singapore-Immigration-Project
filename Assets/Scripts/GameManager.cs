@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     public List<int> upgradesBasePrice = new List<int> {2500, 2500, 1000};
     public List<double> upgradesScale = new List<double> {0.1, 0.1, 0.1};
     public List<TextMeshProUGUI> shopTexts;
+    public TextMeshProUGUI shopDialogue;
+    public transform playerTransform;
+    public Vector2 teleportLocation;
+    public Vector2 teleportOrigin;
     public int npcNumber = 0;
     public int totalNpc = 0;
     public bool[] npcChecklist;
@@ -77,10 +81,15 @@ public class GameManager : MonoBehaviour
     }
     public void BuyFromShop(int itemIndex) {
         int price = (int)(upgradesBasePrice[itemIndex] * (1+ upgradesScale[itemIndex] * upgradesGotten[itemIndex]));
-        money -= price;
-        UIManager.Instance.UpdateMoneyText(money);
-        upgradesGotten[itemIndex] += 1;
-        UpdateShopText(itemIndex);
+        if (price > money) {    
+            shopDialogue.text = "You do not have enough money to buy this upgrade.";
+        } else {
+            shopDialogue.text = "You have bought this upgrade.";
+            money -= price;
+            UIManager.Instance.UpdateMoneyText(money);
+            upgradesGotten[itemIndex] += 1;
+            UpdateShopText(itemIndex);
+        }
     }
     public void UpdateShopText(int textIndex = -1) {
         if (textIndex > 0) {
@@ -91,6 +100,13 @@ public class GameManager : MonoBehaviour
             }
         }
         shopTexts[3].text = money.ToString();
+    }
+    public void TeleportPlayer() {
+        playerTransform.position = teleportLocation;
+    }
+    public void setTeleportVariables(transform playerTransform1, Vector2 teleportLocation1) {
+        playerTransform = playerTransform1;
+        teleportLocation = teleportLocation1;
     }
     public void SetRegionName(RegionInformationScriptableObject regionInfo) {
         selectedRegionInfo = regionInfo;

@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueCanvas;
     public GameObject shopCanvas;
     public List<string> charactersToRemove;
+    public GameObject teleportButton;
+
      public static DialogueManager Instance {
         get {
             return _instance;
@@ -28,13 +30,19 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartConversation(NPCDialogue dialogue) {
+    public void StartConversation(NPCDialogue dialogue, transform playerTransform = null) {
         Debug.Log("conversation is starting");
+        if (playerTransform != null) {
+            teleportButton.SetActive(true);
+            buttonText.text = "Exit";
+        } else {
+            buttonText.text = "Continue";
+        }
         dialogueCanvas.SetActive(true);
         dialogueIndex = 0;
         currentDialogue = dialogue.speechList;
-        buttonText.text = "Continue";
         textBox.text = currentDialogue[dialogueIndex];
+        }
     }
     public void ContinueDialogue() {
         dialogueIndex += 1;
