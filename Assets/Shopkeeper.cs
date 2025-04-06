@@ -6,10 +6,10 @@ public class Shopkeeper : NPCDialogue
 {
     protected void Awake() {
     }
-    public void StartShop() {
+    public override void StartConversation() {
         
         Debug.Log("starting dialogue manager conversation");
-        DialogueManager.Instance.StartConversation(this);
+        DialogueManager.Instance.OpenShop();
     }
 
 }

@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbf015ca3115974398105f35bbbb5d9, type: 3}
   m_Name: Q5
   m_EditorClassIdentifier: 
-  question: placeholder
+  question: Did you enjoy this game?
   image: {fileID: 21300000, guid: 1c6bae48f1a1947199cc01971b7bbcc3, type: 3}
   choices:
-  - choiceContent: none
-    rightAnswer: 1
+  - choiceContent: Yes
+    rightAnswer: 0
     worth: 100
-  - choiceContent: none
-    rightAnswer: 1
+  - choiceContent: Yes!
+    rightAnswer: 0
     worth: 200
-  - choiceContent: none
+  - choiceContent: There is room to improve.
     rightAnswer: 1
     worth: 150
-  - choiceContent: none
+  - choiceContent: It was awesome
     rightAnswer: 1
     worth: 150

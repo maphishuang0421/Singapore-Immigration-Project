@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1987 toilets
   m_EditorClassIdentifier: 
-  title: Public Toilet Flushing Mandate 1987
-  info: "The law mandating the flushing of public toilets was introduced to combat
-    unhygienic behavior and maintain sanitary standards in shared facilities. Enforcement
-    officers conduct surprise inspections, and offenders caught leaving a toilet
-    unflushed face fines of up to SGD 500. This strict policy reflects Singapore\u2019s
-    commitment to cleanliness, even in private habits, and has earned the country
-    its reputation as one of the world\u2019s cleanest nations."
+  title: 'Safety in Singapore (Present Day) '
+  info: "Singapore is one of the safest cities in the world, with low crime rates
+    and strict law enforcement. The government enforces strict penalties for crimes,
+    including heavy fines, caning, and capital punishment for serious offenses. Public
+    spaces are well-monitored with CCTV cameras, ensuring security. The country\u2019s
+    clean streets, efficient emergency services, and strong community policing contribute
+    to a sense of safety. Despite its urban density, Singapore\u2019s safety measures
+    make it a secure place for residents and tourists alike.  "
   image: {fileID: 21300000, guid: afe917992a9df41c1aba78e5e0f08221, type: 3}

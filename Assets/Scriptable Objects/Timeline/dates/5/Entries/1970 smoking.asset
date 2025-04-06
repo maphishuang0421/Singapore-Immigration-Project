@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1970 smoking
   m_EditorClassIdentifier: 
-  title: Smoking Bans in Public 1970s
-  info: Smoking in public spaces like buses, MRT stations, hawker centers, and parks
-    has been banned to protect public health. Over time, the ban expanded to beaches
-    and recreational areas. Smoking is allowed only in designated smoking areas,
-    and violations result in fines of up to SGD 1,000. The government also encourages
-    smokers to quit through public awareness campaigns and accessible cessation programs,
-    further promoting a smoke-free environment.
+  title: 'Taxes in Singapore (Present Day) '
+  info: "Singapore has a low tax environment, making it attractive for businesses
+    and individuals. The personal income tax rate is progressive, ranging from 0%
+    to 22%, while corporate tax is capped at 17%. There is no capital gains tax or
+    estate duty. Goods and Services Tax (GST) is set at 9% from 2024, affecting daily
+    expenses. The government\u2019s tax policies support economic growth while maintaining
+    a high standard of public services, including infrastructure, healthcare, and
+    education.  "
   image: {fileID: 21300000, guid: 601d3872cb0a44da8847a6ead025f1aa, type: 3}

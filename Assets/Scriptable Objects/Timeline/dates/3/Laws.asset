@@ -14,13 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Laws
   lessonEntries:
-  - {fileID: 11400000, guid: c0ee67d110a5c45caab050f98ba0df09, type: 2}
-  - {fileID: 11400000, guid: ee6157c2546374e02ad945b09d84c274, type: 2}
-  - {fileID: 11400000, guid: 8917a75ff49a0496f92ce9caf2d9056c, type: 2}
-  - {fileID: 11400000, guid: 2ab939063a85a4bd788c2abe327cfc17, type: 2}
-  - {fileID: 11400000, guid: d1cb72c413a8c4f5384a468559b8285f, type: 2}
-  - {fileID: 11400000, guid: ce4ab687ead7d4e289a8123423609b7b, type: 2}
-  - {fileID: 11400000, guid: e0773250d7c3240a2ab3a4d37a4fe618, type: 2}
-  - {fileID: 11400000, guid: 4658bdcd0796a4ebba229050965c3b1d, type: 2}
-  - {fileID: 11400000, guid: cfbeda345a64649798557913202f88a6, type: 2}
-  - {fileID: 11400000, guid: 7197b1e54dab34aeda6f2ad599108cf1, type: 2}
+  - {fileID: 11400000, guid: 88c83209670f7413f970c892d0c70562, type: 2}
+  - {fileID: 11400000, guid: f08a23dad30da4a2595977fc74214c33, type: 2}
+  - {fileID: 11400000, guid: 88f10d6492cdf4e2caaadd1b2734596a, type: 2}
+  - {fileID: 11400000, guid: 6909a95202e204216bd59a381f08f4c6, type: 2}
+  - {fileID: 11400000, guid: 7e1c4108b5e8d48bb87d5bbed459af5a, type: 2}
+  - {fileID: 11400000, guid: 3d05581c501c14d0491788a26cd305b6, type: 2}
+  - {fileID: 11400000, guid: 7fd31121ed18e4e3c9cc2f9f86e3b07e, type: 2}
+  - {fileID: 11400000, guid: 13bd83977dcf1459b8fcd1ad337c7b12, type: 2}

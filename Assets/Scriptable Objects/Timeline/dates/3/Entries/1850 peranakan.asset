@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1850 peranakan
   m_EditorClassIdentifier: 
-  title: 'Peranakan Community Emerges 19th Century '
-  info: "The Peranakan, or Straits Chinese, community emerged from the intermarriage
-    of Chinese immigrants and local Malays. They created a rich cultural blend evident
-    in their distinctive attire, such as the kebaya, and unique dishes like laksa
-    and ayam buah keluak. The Peranakan legacy is celebrated as a vibrant part of
-    Singapore\u2019s multicultural heritage.  "
+  title: "Gardens by the Bay \u2013 2012 "
+  info: "Launched in 2012, Gardens by the Bay is a futuristic nature park featuring
+    the iconic Supertree Grove and Flower Dome. Combining sustainability with innovation,
+    it represents Singapore\u2019s dedication to greenery and environmental conservation,
+    making it a global model for urban biodiversity.  "
   image: {fileID: 21300000, guid: afe917992a9df41c1aba78e5e0f08221, type: 3}

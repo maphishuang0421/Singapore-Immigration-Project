@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1960 spitting
   m_EditorClassIdentifier: 
-  title: Spitting in Public Illegal 1960s
-  info: 'Spitting in public spaces, such as sidewalks and parks, is banned to promote
-    hygiene and prevent the spread of diseases. The anti-spitting law was introduced
-    alongside other public health measures to combat illnesses like tuberculosis.
-    Offenders are fined up to SGD 1,000 for first violations, with repeat offenses
-    leading to even higher penalties. Public campaigns emphasize the health risks
-    and social unacceptability of spitting in shared spaces.  '
+  title: 'Housing in Singapore (Present Day) '
+  info: "Singapore offers a mix of public and private housing, with over 80% of residents
+    living in HDB flats. These government-subsidized apartments provide affordable
+    homeownership options. Private condominiums and landed properties cater to higher-income
+    groups. Rental costs vary by location, with central areas being the most expensive.
+    The government implements strict housing policies to ensure sustainability, including
+    property cooling measures and foreign ownership restrictions. Despite limited
+    land, Singapore\u2019s urban planning prioritizes efficiency, greenery, and accessibility,
+    making housing an essential aspect of daily life.  "
   image: {fileID: 21300000, guid: 88baf38a697df4a01a0ace0cf81a7f9e, type: 3}

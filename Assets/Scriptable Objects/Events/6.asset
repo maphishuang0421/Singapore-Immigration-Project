@@ -15,7 +15,7 @@ MonoBehaviour:
   title: National Day
   info: Placeholder Info
   image: {fileID: 0}
-  lesson: {fileID: 11400000, guid: 998204b8e68b644489b84858cf5e1f08, type: 2}
-  quiz: {fileID: 11400000, guid: cac6d5d35a47c472984b0b25ab224420, type: 2}
+  lesson: {fileID: 11400000, guid: c82c82215d0854c1db713fa17b569e85, type: 2}
+  quiz: {fileID: 11400000, guid: 24bb74c351d2045d1a19e88bbd93f2e2, type: 2}
   simulation: {fileID: 309459421171170105, guid: 1bec8cf06a59b5a4eb229a68496105c2, type: 3}
   numNPC: 3

@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1299
   m_EditorClassIdentifier: 
-  title: 'Founding of Singapura 1299 '
-  info: According to the Malay Annals, Prince Sang Nila Utama, a ruler from Palembang,
-    is said to have arrived on the island while searching for a new settlement. Upon
-    reportedly seeing a lion (though likely a tiger), he names the island "Singapura,"
-    meaning "Lion City." This event symbolizes the establishment of the island as
-    a significant port and royal outpost. Singapura becomes a small but thriving
-    trading center, attracting regional traders and sailors.
+  title: "Work and Productivity (9:00 AM \u2013 12:30 PM) "
+  info: "Singapore\u2019s work culture values efficiency and discipline, with employees
+    starting their day focused on meetings, emails, and tasks. Schools also emphasize
+    structured learning, with students attending lessons and participating in discussions
+    or group work.  "
   image: {fileID: 21300000, guid: cce8898b6e8aa4da6bb90f5e956f42e7, type: 3}

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1300 chinese
   m_EditorClassIdentifier: 
-  title: Arrival of Chinese Traders 14th Century
-  info: "Chinese merchants began visiting Temasek, attracted by its strategic location
-    near the Strait of Malacca. They traded porcelain, silk, and tea for spices and
-    other goods. Over time, many Chinese traders settled on the island, bringing
-    with them cultural practices, festivals, and culinary traditions that became
-    foundational to Singapore\u2019s identity."
+  title: "Victoria Theatre and Concert Hall \u2013 1905 "
+  info: "Originally built in the 1860s and expanded in 1905, the Victoria Theatre
+    and Concert Hall is one of Singapore\u2019s oldest performing arts venues. It
+    has witnessed historic events, including political speeches and classical performances.
+    Today, it remains a key cultural landmark, showcasing Singapore\u2019s artistic
+    and architectural heritage.  "
   image: {fileID: 21300000, guid: 5115cf0708ef747f380fc999d1132c61, type: 3}

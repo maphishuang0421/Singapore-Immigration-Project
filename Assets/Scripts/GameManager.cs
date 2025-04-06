@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +13,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] protected int monthIndex = 0;
     [SerializeField] protected int monthEventNumber = 0;
     [SerializeField] private RegionInformationScriptableObject selectedRegionInfo;
+    public Dictionary<string, double> upgradesDict = new Dictionary<string, double> {
+        ["Increase money gained"] = 0.05, ["Decrease money lost"] = 0.05, ["Increase character speed"] = 0.1
+        };
+    public List<int> upgradesGotten = new List<int> {0, 0, 0};
+    public List<int> upgradesBasePrice = new List<int> {2500, 2500, 1000};
+    public List<double> upgradesScale = new List<double> {0.1, 0.1, 0.1};
+    public List<TextMeshProUGUI> shopTexts;
     public int npcNumber = 0;
     public int totalNpc = 0;
     public bool[] npcChecklist;
@@ -57,8 +66,31 @@ public class GameManager : MonoBehaviour
         return count;
     }
     public void UpdateMoney(int changeAmount) {
+        if (changeAmount > 0) {
+            int scaleChangeAmount = (int) (changeAmount * (1 + upgradesDict["Increase money gained"] * upgradesGotten[0]));
+        }
+        if (changeAmount < 0) {
+            int scaleChangeAmount = (int) (changeAmount * (1 - upgradesDict["Decrease money lost"] * upgradesGotten[1]));
+        }
         money += changeAmount;
         UIManager.Instance.UpdateMoneyText(money);
+    }
+    public void BuyFromShop(int itemIndex) {
+        int price = (int)(upgradesBasePrice[itemIndex] * (1+ upgradesScale[itemIndex] * upgradesGotten[itemIndex]));
+        money -= price;
+        UIManager.Instance.UpdateMoneyText(money);
+        upgradesGotten[itemIndex] += 1;
+        UpdateShopText(itemIndex);
+    }
+    public void UpdateShopText(int textIndex = -1) {
+        if (textIndex > 0) {
+            shopTexts[textIndex].text = "$" + ((int) (upgradesBasePrice[textIndex] * (1+ upgradesScale[textIndex] * upgradesGotten[textIndex]))).ToString();
+        } else {
+            for (int i=0; i < shopTexts.Count-1; i++) {
+                shopTexts[i].text = "$" + ((int)(upgradesBasePrice[i] * (1+ upgradesScale[i] * upgradesGotten[i]))).ToString();
+            }
+        }
+        shopTexts[3].text = money.ToString();
     }
     public void SetRegionName(RegionInformationScriptableObject regionInfo) {
         selectedRegionInfo = regionInfo;

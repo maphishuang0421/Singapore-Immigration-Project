@@ -16,15 +16,20 @@ public class NPCDialogue : MonoBehaviour
         NPCindex = index;
     }
     public virtual void StartConversation() {
-        speechList = ServerManager.Instance.NPCDialogue[NPCindex].Split('\n').ToList();
-        for(int i=speechList.Count-1; i>=0; i--) {
-            if(speechList[i] == "") {
-                speechList.RemoveAt(i);
-            } else {
-                foreach(var c in DialogueManager.Instance.charactersToRemove) {
-                    speechList[i] = speechList[i].Replace(c, string.Empty);
-                } 
+        try {
+            speechList = ServerManager.Instance.NPCDialogue[NPCindex].Split('\n').ToList();
+            for(int i=speechList.Count-1; i>=0; i--) {
+                if(speechList[i] == "") {
+                    speechList.RemoveAt(i);
+                } else {
+                    foreach(var c in DialogueManager.Instance.charactersToRemove) {
+                        speechList[i] = speechList[i].Replace(c, string.Empty);
+                    } 
+                }
             }
+        } catch {
+            Debug.Log("There was an error with the dialogue.");
+            speechList = new List<string> {"Hi, there was an error with the dialogue generation.", "Please try again later!"};
         }
         Debug.Log("starting dialogue manager conversation");
         DialogueManager.Instance.StartConversation(this);

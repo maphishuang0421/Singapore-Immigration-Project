@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1867
   m_EditorClassIdentifier: 
-  title: 'Formation of the Straits Settlements 1867 '
-  info: "Singapore, along with Penang and Malacca, is reorganized under direct British
-    administration as part of the Straits Settlements. This change strengthens the
-    colony\u2019s governance and allows for more focused economic development. Infrastructure
-    projects, such as the construction of roads, ports, and public buildings, accelerate.
-    Singapore becomes a bustling entrep\xF4t for goods like tin, rubber, and spices,
-    with its economy relying heavily on the labor of migrants.  "
+  title: "Evening Wind Down (6:00 PM \u2013 8:00 PM) "
+  info: 'After work or school, many Singaporeans unwind by heading to shopping malls,
+    parks, or fitness centers. Some enjoy dinner with family at home or dine out
+    at local eateries. Meals may include dishes like zi char, nasi lemak, or hotpot
+    for a hearty feast.  '
   image: {fileID: 21300000, guid: 29250f25f4652453e9f5d7a5a19c9110, type: 3}

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1400 malay
   m_EditorClassIdentifier: 
-  title: Malay Settlements 14th-15th Century
-  info: As a key part of the Malay Archipelago, Singapore saw the growth of Malay
-    settlements. These communities contributed to the local language and traditions,
-    such as kampong-style living and the spread of Islam. Malay culture remains central
-    to Singapore's identity, reflected in architecture, art, and customs like Hari
-    Raya celebrations.
+  title: "Merlion Statue \u2013 1972 "
+  info: "The Merlion, a mythical creature with a lion\u2019s head and a fish\u2019s
+    body, was introduced as Singapore\u2019s tourism symbol in 1964. The famous Merlion
+    statue at Marina Bay was erected in 1972, becoming an iconic representation of
+    the city\u2019s maritime history and cultural identity. Visitors from around
+    the world come to take photos with this beloved landmark.  "
   image: {fileID: 21300000, guid: 88baf38a697df4a01a0ace0cf81a7f9e, type: 3}

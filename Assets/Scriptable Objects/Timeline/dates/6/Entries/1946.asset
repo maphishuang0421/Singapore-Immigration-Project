@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7462228bf9a5f49a7be9f22b6fd018, type: 3}
   m_Name: 1946
   m_EditorClassIdentifier: 
-  title: 'Return to British Rule and Growing Nationalism 1946 '
-  info: 'After the Japanese surrender in 1945, Singapore returns to British control
-    but is now directly governed as a separate Crown Colony. However, the war has
-    left Singaporeans disillusioned with colonialism. A burgeoning nationalist movement
-    emerges, with workers, unions, and political parties advocating for greater self-rule.
-    Strikes and protests against poor wages and living conditions intensify, reflecting
-    widespread dissatisfaction with British governance.  '
+  title: "Late Night Rest (10:30 PM \u2013 12:00 AM) "
+  info: As Singaporeans wind down, many engage in self-care routines or read before
+    bed. The city's quiet streets contrast with the earlier hustle, as people recharge
+    for another productive day ahead.
   image: {fileID: 21300000, guid: afe917992a9df41c1aba78e5e0f08221, type: 3}

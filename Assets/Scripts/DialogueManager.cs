@@ -5,11 +5,13 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI textBox;
+    public TMPro.TextMeshProUGUI shoptextBox;
     public List<string> currentDialogue;
     public int dialogueIndex = 0;
     private static DialogueManager _instance;
     public TMPro.TextMeshProUGUI buttonText;
     public GameObject dialogueCanvas;
+    public GameObject shopCanvas;
     public List<string> charactersToRemove;
      public static DialogueManager Instance {
         get {
@@ -47,7 +49,8 @@ public class DialogueManager : MonoBehaviour
         }
     }
     public void OpenShop() {
-        dialogueCanvas.SetActive(true);
-        textBox.text = "Welcome to the shop!";
+        shopCanvas.SetActive(true);
+        shoptextBox.text = "Welcome to the shop!";
+        GameManager.Instance.UpdateShopText();
     }
 }
