@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     public transform playerTransform;
     public Vector2 teleportLocation;
     public Vector2 teleportOrigin;
+    public double timerBaseTime = 120;
+    private double timerCurrentTime;
+    public bool timerStarted = false;
     public int npcNumber = 0;
     public int totalNpc = 0;
     public bool[] npcChecklist;
@@ -103,6 +106,22 @@ public class GameManager : MonoBehaviour
     }
     public void TeleportPlayer() {
         playerTransform.position = teleportLocation;
+        timerCurrentTime = timerBaseTime;
+        timerStarted = true;
+        // start timer
+        // track what the player has done (correct items) (store as boolean: true = selected, false = not selected)
+        // if default false is correct, -0. if default false is wrong, -penalty. 
+        // if toggled to true and is wrong, -smaller penalty. if toggled to true and is correct, +money.
+    }
+    void FixedUpdate() {
+        if (timerStarted == true) {
+            timerCurrentTime -= Time.fixedDeltaTime;
+            if (timerCurrentTime <= 0) {
+                Debug.Log("timer ran out");
+                // when timer runs out or player clicks done, dialoge shows "inspector has come to check your work"
+        // calculate score and give/subtract money
+            }
+        }
     }
     public void setTeleportVariables(transform playerTransform1, Vector2 teleportLocation1) {
         playerTransform = playerTransform1;
