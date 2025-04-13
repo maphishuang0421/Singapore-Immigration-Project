@@ -35,6 +35,8 @@ public class UIManager : MonoBehaviour
     private bool quizDone = false;
     private bool lessonDone = false;
     private bool simulationDone = false;
+    public TextMeshProUGUI timer;
+    public GameObject timerPanel;
 
     private static UIManager _instance;
     public static UIManager Instance {
@@ -189,6 +191,10 @@ public class UIManager : MonoBehaviour
             simQuest.text = "Objective: Find the exit";
             simQuest2.text = "";
         }
+    }
+
+    public void UpdateTimerText(string timerValue) {
+        timer.text = "Time left: " + timerValue + "s";
     }
 
     public void DeleteSimulation() {

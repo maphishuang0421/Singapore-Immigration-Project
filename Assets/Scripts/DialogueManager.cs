@@ -30,12 +30,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartConversation(NPCDialogue dialogue, transform playerTransform = null) {
+    public void StartConversation(NPCDialogue dialogue, bool isTeleport=false) {
         Debug.Log("conversation is starting");
-        if (playerTransform != null) {
+        if (isTeleport != false) {
+            Debug.Log("teleport button is on");
             teleportButton.SetActive(true);
             buttonText.text = "Exit";
         } else {
+            Debug.Log("teleport button should be off");
+            teleportButton.SetActive(false);
             buttonText.text = "Continue";
         }
         dialogueCanvas.SetActive(true);
@@ -43,7 +46,6 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = dialogue.speechList;
         textBox.text = currentDialogue[dialogueIndex];
         }
-    }
     public void ContinueDialogue() {
         dialogueIndex += 1;
         if(dialogueIndex == currentDialogue.Count - 1){
@@ -58,6 +60,8 @@ public class DialogueManager : MonoBehaviour
     }
     public void OpenShop() {
         shopCanvas.SetActive(true);
+        Debug.Log("teleport button should be off");
+        teleportButton.SetActive(false);
         shoptextBox.text = "Welcome to the shop!";
         GameManager.Instance.UpdateShopText();
     }

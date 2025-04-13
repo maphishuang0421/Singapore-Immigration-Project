@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public List<double> upgradesScale = new List<double> {0.1, 0.1, 0.1};
     public List<TextMeshProUGUI> shopTexts;
     public TextMeshProUGUI shopDialogue;
-    public transform playerTransform;
+    public Transform playerTransform;
     public Vector2 teleportLocation;
     public Vector2 teleportOrigin;
     public double timerBaseTime = 120;
@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
         playerTransform.position = teleportLocation;
         timerCurrentTime = timerBaseTime;
         timerStarted = true;
+        UIManager.Instance.timerPanel.SetActive(true);
         // start timer
         // track what the player has done (correct items) (store as boolean: true = selected, false = not selected)
         // if default false is correct, -0. if default false is wrong, -penalty. 
@@ -116,14 +117,16 @@ public class GameManager : MonoBehaviour
     void FixedUpdate() {
         if (timerStarted == true) {
             timerCurrentTime -= Time.fixedDeltaTime;
+            UIManager.Instance.UpdateTimerText(timerCurrentTime.ToString());
             if (timerCurrentTime <= 0) {
                 Debug.Log("timer ran out");
+                UIManager.Instance.timerPanel.SetActive(false);
                 // when timer runs out or player clicks done, dialoge shows "inspector has come to check your work"
         // calculate score and give/subtract money
             }
         }
     }
-    public void setTeleportVariables(transform playerTransform1, Vector2 teleportLocation1) {
+    public void setTeleportVariables(Transform playerTransform1, Vector2 teleportLocation1) {
         playerTransform = playerTransform1;
         teleportLocation = teleportLocation1;
     }
