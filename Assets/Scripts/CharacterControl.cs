@@ -42,7 +42,7 @@ public class CharacterControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rigidBody.MovePosition(rigidBody.position + Vector2.ClampMagnitude(playerSpeed * movementVector, playerSpeed) * Time.fixedDeltaTime);
+        rigidBody.MovePosition(rigidBody.position + Vector2.ClampMagnitude(playerSpeed* (float) (1+GameManager.Instance.upgradesScale[2] * GameManager.Instance.upgradesGotten[2]) * movementVector, playerSpeed* (float) (1+GameManager.Instance.upgradesScale[2] * GameManager.Instance.upgradesGotten[2]) ) * Time.fixedDeltaTime);
     }
     void OnTriggerEnter2D(Collider2D col) 
     {

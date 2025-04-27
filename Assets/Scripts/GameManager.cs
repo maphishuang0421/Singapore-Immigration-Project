@@ -27,6 +27,14 @@ public class GameManager : MonoBehaviour
     public double timerBaseTime = 120;
     private double timerCurrentTime;
     public bool timerStarted = false;
+    public bool minigameDone = false;
+    public Dictionary<string, bool> minigameItemDict = new Dictionary<string, bool> {
+        ["Gum1"] = false, ["Gum2"] = false, ["Litter"] = false, ["Vandalism"] = false, ["Spit"] = false, ["Smoking"] = false, ["Toilet"] = false, ["Alcohol at 12pm"] = false
+    };
+    public Dictionary<string, bool> minigameAnswerDict = new Dictionary<string, bool> {
+        ["Gum1"] = true, ["Gum2"] = true, ["Litter"] = true, ["Vandalism"] = true, ["Spit"] = true, ["Smoking"] = true, ["Toilet"] = true, ["Alcohol at 12pm"] = false
+    };
+    bool teleportBack = false;
     public int npcNumber = 0;
     public int totalNpc = 0;
     public bool[] npcChecklist;
@@ -105,25 +113,69 @@ public class GameManager : MonoBehaviour
         shopTexts[3].text = money.ToString();
     }
     public void TeleportPlayer() {
+        teleportOrigin = playerTransform.position;
         playerTransform.position = teleportLocation;
         timerCurrentTime = timerBaseTime;
         timerStarted = true;
         UIManager.Instance.timerPanel.SetActive(true);
-        // start timer
-        // track what the player has done (correct items) (store as boolean: true = selected, false = not selected)
-        // if default false is correct, -0. if default false is wrong, -penalty. 
-        // if toggled to true and is wrong, -smaller penalty. if toggled to true and is correct, +money.
+        DialogueManager.Instance.teleportButton.SetActive(false);
     }
-    void FixedUpdate() {
-        if (timerStarted == true) {
+    void FixedUpdate() 
+    {
+        if (timerStarted == true) 
+        {
             timerCurrentTime -= Time.fixedDeltaTime;
-            UIManager.Instance.UpdateTimerText(timerCurrentTime.ToString());
-            if (timerCurrentTime <= 0) {
+            UIManager.Instance.UpdateTimerText( ((int)timerCurrentTime).ToString());
+            if (timerCurrentTime <= 0) 
+            {
                 Debug.Log("timer ran out");
-                UIManager.Instance.timerPanel.SetActive(false);
-                // when timer runs out or player clicks done, dialoge shows "inspector has come to check your work"
-        // calculate score and give/subtract money
+                EndMinigame();
+            }   
+        }
+    }
+    public void SetMinigameItemState(string objectName) {
+        minigameItemDict[objectName] = !minigameItemDict[objectName];
+    }
+    public void EndMinigame() {
+        Debug.Log("EndMinigame is called");
+        int money = 0;
+        int counter = 0;
+        foreach (KeyValuePair<string,bool> minigameItem in minigameItemDict) {
+            if (minigameItemDict[minigameItem.Key]!=minigameAnswerDict[minigameItem.Key]) {
+                if (minigameItem.Value==false) {
+                    UpdateMoney(-1000);
+                     money -=1000;
+                }
+                else {
+                    UpdateMoney(-900);
+                    money -=900;
+                }
             }
+            else {
+                UpdateMoney(1000);
+                money +=1000;
+                counter += 1;
+            }
+        } 
+        UIManager.Instance.timerPanel.SetActive(false);
+        timerStarted=false;
+        DialogueManager.Instance.dialogueCanvas.SetActive(true);
+        teleportBack = true;
+        minigameDone = true;
+
+        if (money > 0) {
+            DialogueManager.Instance.textBox.text = "You have finished. The inspector has come to check your work. You have gotten " + counter.ToString() + " correct. You have been rewarded " + money.ToString() + ".";
+        } else if (money < 0) {
+            DialogueManager.Instance.textBox.text = "You have finished. The inspector has come to check your work. You have gotten " + counter.ToString() + " correct. You have been fined " + Mathf.Abs(money).ToString() + ".";
+        } else {
+            DialogueManager.Instance.textBox.text = "You have finished. The inspector has come to check your work. You have gotten " + counter.ToString() + " correct. Your money has not changed.";
+        }
+        
+    }
+    public void TeleportBack() {
+        if (teleportBack) {
+            playerTransform.position = teleportOrigin;
+            teleportBack = false;
         }
     }
     public void setTeleportVariables(Transform playerTransform1, Vector2 teleportLocation1) {
@@ -135,6 +187,7 @@ public class GameManager : MonoBehaviour
     }
     public void MonthDeduction() {
         UpdateMoney(-selectedRegionInfo.livingExpenses);
+        minigameDone = false;
         if (money <= 0) {
             money = 0;
             UIManager.Instance.Finished("You lost. You have no more money. Thank you for playing.");
